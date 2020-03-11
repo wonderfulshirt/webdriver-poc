@@ -1,27 +1,27 @@
 package com.wonderfulshirt.tests;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
-  private static WebDriver driver;
+  private WebDriver driver;
 
-  @BeforeClass
-  public static void setup() {
+  @Before
+  public void setup() {
     driver = new ChromeDriver();
   }
 
-  @AfterClass
-  public static void tearDown() {
+  @After
+  public void tearDown() {
     if(null != driver) {
       driver.close();
       driver.quit();
     }
   }
 
-  public WebDriver getDriver() {
+  WebDriver getDriver() {
     return driver;
   }
 
