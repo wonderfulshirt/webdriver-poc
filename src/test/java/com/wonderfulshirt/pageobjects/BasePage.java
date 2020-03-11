@@ -22,16 +22,4 @@ public class BasePage {
     wait = new WebDriverWait(driver, TIMEOUT, POLLING);
     PageFactory.initElements(new AjaxElementLocatorFactory(driver, TIMEOUT), this);
   }
-
-  public void waitForElementToAppear(By locator) {
-    wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-  }
-
-  public void waitForElementToDisappear(By locator) {
-    wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
-  }
-
-  public void waitForTextToDisappear(By locator, String text) {
-    wait.until(ExpectedConditions.not(ExpectedConditions.textToBe(locator, text)));
-  }
 }
