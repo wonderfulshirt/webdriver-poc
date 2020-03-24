@@ -5,7 +5,7 @@ import com.wonderfulshirt.pageobjects.GoogleSearchResultsPage;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class GoogleHomePageTests extends BaseTest {
+public class GoogleHomePageTest extends BaseTest {
 
   @Test
   public void searchForCheese() {
